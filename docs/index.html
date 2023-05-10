@@ -45,40 +45,27 @@
 		}
 	  }
 	</style>
-  <title>Work Space</title>
+  <title>ADMARKET</title>
 	</head>
   <body>
     <div class="container mt-2" style="max-width: 72em">
 
       <nav class="navbar bg-white navbar-light">
         <div class="container-fluid">
-          <span class="navbar-brand m-0 h4 fw-bold">Work Place</span>
+          <span class="navbar-brand m-0 h4 fw-bold">ADMARKET</span>
           <div class="mb-4" style="margin-top: 4em">
             <a
               class="btn btn-dark rounded-pill"
               data-bs-toggle="modal"
               data-bs-target="#addModal"
             >
-              Add Assignment
+              Add Adspace
             </a>
             <a
               class="btn btn-dark rounded-pill"
-              data-bs-toggle="modal"
-              data-bs-target="#addModal2"
+              id= "adspaceeRender"
             >
-              Add Worker
-            </a>
-            <a
-              class="btn btn-dark rounded-pill"
-              id = "AssignmentRender"
-            >
-              Assignments
-            </a>
-            <a
-              class="btn btn-dark rounded-pill"
-              id= "WorkerRender"
-            >
-              Workers
+              Adspaces
             </a>
           </div>
           <span class="nav-link border rounded-pill bg-light">
@@ -91,94 +78,13 @@
         <span id="notification">⌛ Loading...</span>
       </div>
     </div>  
-  <main id="Art Place" class="row"></main>
+  <main id="AdMarket" class="row"></main>
 </div>
-
-
 
 <!--Modal-->
 <div
   class="modal fade"
   id="addModal"
-  tabindex="-1"
-  aria-labelledby="newAssignmentModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-	  <div class="modal-content">
-
-	    <div class="modal-header">
-		    <h5 class="modal-title" id="newProductModalLabel">New Assignment</h5>
-		    <button
-		      type="button"
-		      class="btn-close"
-		      data-bs-dismiss="modal"
-		      aria-label="Close"
-		    ></button>
-	    </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-row">
-            <div class="col">
-              <input
-                type="text"
-                id="newAssignmentName"
-                class="form-control mb-2"
-                placeholder="Enter name of Assignment"
-              />
-            </div>
-            <div class="col">
-              <input
-                type="text"
-                id="newImgUrl"
-                class="form-control mb-2"
-                placeholder="Enter image url"
-              />
-            </div>
-            <div class="col">
-              <input
-                type="text"
-                id="newAssignmentDescription"
-                class="form-control mb-2"
-                placeholder="Enter Assignment description"
-              />
-            </div>
-            <div class="col">
-              <input
-                type="text"
-                id="newPrice"
-                class="form-control mb-2"
-                placeholder="Enter price"
-              />
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-light border"
-          data-bs-dismiss="modal"
-          > close </button>
-        <button
-          type="button"
-          class="btn btn-dark"
-          data-bs-dismiss="modal"
-          id="newAssignmentBtn"
-        >
-          Add Assignment
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!--Modal-->
-<div
-  class="modal fade"
-  id="addModal2"
   tabindex="-1"
   aria-labelledby="newWorkerModalLabel"
   aria-hidden="true"
@@ -187,7 +93,7 @@
 	  <div class="modal-content">
 
 	    <div class="modal-header">
-		    <h5 class="modal-title" id="newProductModalLabel">New Worker</h5>
+		    <h5 class="modal-title" id="newProductModalLabel">New AdSpace</h5>
 		    <button
 		      type="button"
 		      class="btn-close"
@@ -201,26 +107,27 @@
             <div class="col">
               <input
                 type="text"
-                id="newWorkerName"
+                id="newadSpaceName"
                 class="form-control mb-2"
-                placeholder="Enter name of Worker"
+                placeholder="Enter name adSpace"
               />
             </div>
             <div class="col">
               <input
                 type="text"
-                id="newWorkerImgUrl"
+                id="newadSpacePrice"
                 class="form-control mb-2"
-                placeholder="Enter image url"
+                placeholder="Enter Price for the Adspace"
               />
             </div>
             <div class="col">
               <input
                 type="text"
-                id="newWorkerDescription"
+                id="newStartTime"
                 class="form-control mb-2"
-                placeholder="Enter Worker description"
+                placeholder="Enter StartTime"
               />
+            </div>
             </div>
           </div>
         </form>
@@ -235,79 +142,14 @@
           type="button"
           class="btn btn-dark"
           data-bs-dismiss="modal"
-          id="newWorkerBtn"
+          id="newadSpaceBtn"
         >
-          Add Worker
+          Add adSpace
         </button>
       </div>
     </div>
   </div>
 </div>
-
-
-<!--Modal-->
-<div
-  class="modal fade"
-  id="addModal1"
-  tabindex="-1"
-  aria-labelledby="newSubmissionModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-	  <div class="modal-content">
-
-	    <div class="modal-header">
-		    <h5 class="modal-title" id="newProductModalLabel">New Submission</h5>
-		    <button
-		      type="button"
-		      class="btn-close"
-		      data-bs-dismiss="modal"
-		      aria-label="Close"
-		    ></button>
-	    </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-row">
-            <div class="col">
-              <input
-                type="uint"
-                id="newPieceName"
-                class="form-control mb-2"
-                placeholder="Enter Assignment Index"
-              />
-            </div>
-            <div class="col">
-              <input
-                type="text"
-                id="newSubmission"
-                class="form-control mb-2"
-                placeholder="Enter Submission or Submission Url"
-              />
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-light border"
-          data-bs-dismiss="modal"
-          > close </button>
-        <button
-          type="button"
-          class="btn btn-dark"
-          data-bs-dismiss="modal"
-          id="newSubmissionBtn"
-        >
-          Add Submission
-        </button>
-      </div>
-    </div>
-  </div>
-</div>      
-
-
 
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"

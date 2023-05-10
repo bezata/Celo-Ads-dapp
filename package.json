@@ -14,7 +14,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "dev": " node index.js",
-    "build": "webpack"
+    "dev": " cross-env NODE_OPTIONS='--openssl-legacy-provider' node index.js",
+    "build": "cross-env NODE_OPTIONS='--openssl-legacy-provider' webpack"
   }
 }
